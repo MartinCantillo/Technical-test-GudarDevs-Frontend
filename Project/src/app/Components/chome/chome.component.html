@@ -2,27 +2,30 @@
 <meta charset="utf-8" />
 <div class="container">
   <h1 class="custom-font">PHONE BOOKS</h1>
+  <div class="btn-container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>PhoneNumber</th>
-      <th>Comments</th>
-      <th>Opciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of contacts">
-      <td>{{ item.name }}</td>
-      <td>{{ item.phoneNumber }}</td>
-      <td>{{ item.comments }}</td>
-      <td>
-        <button type="button" class="btn btn-dark" style="margin-right: 50px">Ordenar</button>
-        <button type="button" class="btn btn-secondary">Archivo</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<br />
+    <button type="button" class="btn btn-primary btn-save">Save</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>PhoneNumber</th>
+        <th>Comments</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of contacts">
+        <td>{{ item.name }}<
+        <td>{{ item.phoneNumber }}</td>
+        <td>{{ item.comments }}</td>
+        <td>
+          <button type="button" class="btn btn-dark" style="margin-right: 10px">Edit</button>
+          <button type="button" class="btn btn-secondary">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
 </div>

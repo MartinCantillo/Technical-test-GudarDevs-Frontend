@@ -23,12 +23,22 @@ th {
 
 .container {
   margin: 20px auto;
-  max-width: 9000px;
+  max-width: 1000px;
 }
 
-/* Estilos para el título */
+
 .custom-font {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   font-size: 46px;
+}
+
+.btn-save {
+  display: block;
+  margin: 20px auto;
+
+}
+.btn-container {
+  float: left;
+  margin-right: 20px;
 }
