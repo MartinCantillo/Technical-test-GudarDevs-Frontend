@@ -8,15 +8,16 @@
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" [(ngModel)]="contact.name" required>
   </div>
-
   <div>
     <label for="contactType">Type:</label>
-    <select id="contactType" name="contactType" [(ngModel)]="contact.ctype" required>
-      <option value="1">Person</option>
-      <option value="2">Public organization</option>
-      <option value="3">Private organization</option>
+    <select id="contactType" name="contactType" [(ngModel)]="contact.ContactType" required>
+      <option value="Person">Person</option>
+      <option value="Public organization">Public organization</option>
+      <option value="Private organization">Private organization</option>
     </select>
   </div>
+
+
 
   <div>
     <label for="phoneNumber">Phone Number:</label>

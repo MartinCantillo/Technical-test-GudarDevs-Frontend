@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Contact } from 'src/app/Models/Contact';
+import { SContactService } from 'src/app/Services/scontact.service';
 
 @Component({
   selector: 'app-cform-save',
@@ -10,16 +11,19 @@ import { Contact } from 'src/app/Models/Contact';
 })
 export class CFormSaveComponent {
   contact: Contact = new Contact()
-  constructor() { }
+  constructor(private _SContactService: SContactService) { }
 
   onSubmit() {
     console.log(this.contact);
-    // Aquí puedes enviar los datos del contacto
+    this._SContactService.SaveUser(this.contact).subscribe({
+      next: (res) => console.log("Contact saved "+res),
+      error: (error) => {
+        console.log(error);
+      },
+    });
   }
-  showAdditionalFields(): boolean {
-    // Muestra los campos adicionales solo si el tipo de contacto es Organización Pública o Privada
-    return this.contact.ctype === 2 || this.contact.ctype === 3;
-  }
+
+
 
 }
 
