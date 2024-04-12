@@ -1,10 +1,10 @@
 export class Contact {
   Id_Contact: number = 0;
-  Name: string = "";
-  ContactType: number = 0;
-  AdditionalField: number = 0;
-  PhoneNumber: number = 0;
-  Comments: string = "";
+  name: string = "";
+  contactType: number = 0;
+  additionalField: number = 0;
+  phoneNumber: number = 0;
+  comments: string = "";
 
   constructor() {
 

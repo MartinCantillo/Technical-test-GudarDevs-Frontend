@@ -1,0 +1,28 @@
+<br />
+<meta charset="utf-8" />
+<div class="container">
+  <h1 class="custom-font">PHONE BOOKS</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>PhoneNumber</th>
+      <th>Comments</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of contacts">
+      <td>{{ item.name }}</td>
+      <td>{{ item.phoneNumber }}</td>
+      <td>{{ item.comments }}</td>
+      <td>
+        <button type="button" class="btn btn-dark" style="margin-right: 50px">Ordenar</button>
+        <button type="button" class="btn btn-secondary">Archivo</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br />
+</div>

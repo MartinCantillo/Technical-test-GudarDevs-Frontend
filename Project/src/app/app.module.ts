@@ -7,26 +7,28 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CloginComponentComponent } from './Components/clogin-component/clogin-component.component';
+import { CHomeComponent } from './Components/chome/chome.component';
+import { CLogoutComponent } from './Components/clogout/clogout.component';
+import { SContactService } from './Services/scontact.service';
 
 //Roustes
-const appRoutes: Routes = [
-  { path: "loggin", component: CloginComponentComponent },
-  //{ //path: "Registrarse", component: CRegistrarseComponent },
-]
+
 @NgModule({
   declarations: [
     AppComponent,
-    CloginComponentComponent
+    CloginComponentComponent,
+    CHomeComponent,
+    CLogoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
+   // RouterModule.forRoot(appRoutes),
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [SContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
