@@ -1,0 +1,42 @@
+<br>
+<br>
+<h1>Contact book Form</h1>
+<br>
+
+<form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="contact.name" required>
+  </div>
+
+  <div>
+    <label for="contactType">Type:</label>
+    <select id="contactType" name="contactType" [(ngModel)]="contact.ctype" required>
+      <option value="1">Person</option>
+      <option value="2">Public organization</option>
+      <option value="3">Private organization</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="contact.phoneNumber" required>
+  </div>
+
+  <div>
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" [(ngModel)]="contact.comments"></textarea>
+  </div>
+
+  <div>
+    <label for="additionalField1">AdditionalField1:</label>
+    <input type="text" id="additionalField1" name="additionalField1" [(ngModel)]="contact.additionalField1" required>
+
+    <label for="additionalField2">AdditionalField2:</label>
+    <input type="text" id="additionalField2" name="additionalField2" [(ngModel)]="contact.additionalField2" required>
+  </div>
+
+  <div class="center-button">
+    <button type="submit">Submit</button>
+  </div>
+</form>

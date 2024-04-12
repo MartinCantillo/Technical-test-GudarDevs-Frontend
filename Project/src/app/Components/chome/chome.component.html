@@ -4,22 +4,29 @@
   <h1 class="custom-font">PHONE BOOKS</h1>
   <div class="btn-container">
 
-    <button type="button" class="btn btn-primary btn-save">Save</button>
+    <!-- <button type="button" class="btn btn-primary btn-save">Save</button> -->
+
   </div>
   <table>
     <thead>
       <tr>
+        <th>Code</th>
         <th>Name</th>
         <th>PhoneNumber</th>
         <th>Comments</th>
+        <th>Field1</th>
+        <th>Field2</th>
         <th>Opciones</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of contacts">
-        <td>{{ item.name }}<
+        <td>{{ item.id_Contact }}< </td>
+        <td>{{ item.name }} </td>
         <td>{{ item.phoneNumber }}</td>
         <td>{{ item.comments }}</td>
+        <td>{{ item.additionalField1 }}</td>
+        <td>{{ item.additionalField2 }}</td>
         <td>
           <button type="button" class="btn btn-dark" style="margin-right: 10px">Edit</button>
           <button type="button" class="btn btn-secondary">Delete</button>
