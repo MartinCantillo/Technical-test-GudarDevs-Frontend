@@ -13,9 +13,6 @@ export class CHomeComponent {
   contact: Contact = new Contact();
   contacts: Contact[] = [];
 
-
-
-
   constructor(private _SContactService: SContactService, private router: Router) {
     this.loadContacts();
   }
@@ -25,6 +22,9 @@ export class CHomeComponent {
   }
 
   private loadContacts() {
+
+
+
     this._SContactService.GetAll().subscribe(
       (data) => {
         this.contacts = data;
@@ -38,17 +38,17 @@ export class CHomeComponent {
   onDelete(id: number) {
     if (confirm('¿Are you sure?')) {
       this._SContactService.Delete(id).subscribe({
-       next: () => {
-        console.log('Contact deleted successfully');
+        next: () => {
+          console.log('Contact deleted successfully');
 
-      },
+        },
 
-      error: (error) => {
-        console.log(error);
-      },
+        error: (error) => {
+          console.log(error);
+        },
       }
-    );
-    this.router.navigate(['/Form']);
+      );
+      this.router.navigate(['/Form']);
 
     }
 
