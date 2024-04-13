@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Contact } from 'src/app/Models/Contact';
 import { SContactService } from 'src/app/Services/scontact.service';
@@ -14,7 +15,8 @@ export class CHomeComponent {
 
 
 
-  constructor(private _SContactService: SContactService) {
+
+  constructor(private _SContactService: SContactService, private router: Router) {
     this.loadContacts();
   }
 
@@ -28,6 +30,10 @@ export class CHomeComponent {
         this.contacts = data;
       }
     );
+  }
+  update(contact: Contact) {
+    this._SContactService.contact = contact;
+    this.router.navigate(['/Update']);
   }
 
 
