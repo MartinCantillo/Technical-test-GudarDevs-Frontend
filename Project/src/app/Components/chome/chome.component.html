@@ -31,7 +31,7 @@
         <td>{{ item.additionalField2 }}</td>
         <td>
           <button type="button" class="btn btn-dark" (click)="update(item)" style="margin-right: 10px">Edit</button>
-          <button type="button" class="btn btn-secondary">Delete</button>
+          <button type="button" class="btn btn-secondary" (click)="onDelete(item.id_Contact)">Delete</button>
         </td>
       </tr>
     </tbody>
