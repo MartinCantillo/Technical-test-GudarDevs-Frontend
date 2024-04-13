@@ -10,6 +10,7 @@ import { CloginComponentComponent } from './Components/clogin-component/clogin-c
 import { CHomeComponent } from './Components/chome/chome.component';
 import { CLogoutComponent } from './Components/clogout/clogout.component';
 import { SContactService } from './Services/scontact.service';
+import { CFormSaveComponent } from './Components/cform-save/cform-save.component';
 
 //Roustes
 
@@ -18,7 +19,8 @@ import { SContactService } from './Services/scontact.service';
     AppComponent,
     CloginComponentComponent,
     CHomeComponent,
-    CLogoutComponent
+    CLogoutComponent,
+    CFormSaveComponent
   ],
   imports: [
     BrowserModule,

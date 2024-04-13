@@ -8,11 +8,18 @@ import { Contact } from '../Models/Contact';
 })
 export class SContactService {
   private Url: string = 'http://localhost:5287/CContact/GetAllContact';
+  private Urlsave: string = 'http://localhost:5287/SaveContact';
+
+
   constructor(private httpClient: HttpClient) {
 
   }
-  //Method to get all baches
+
   GetAll(): Observable<Contact[]> {
     return this.httpClient.get<Contact[]>(`${this.Url}`);
+  }
+
+  public SaveUser(contact: Contact): Observable<Object> {
+    return this.httpClient.post(`${this.Urlsave}`, contact);
   }
 }
